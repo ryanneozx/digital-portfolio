@@ -1,10 +1,10 @@
 import './App.css'
-import Navbar from './components/navbar'
-import Hero1 from './components/hero1'
-import About from './components/about'
-import Experience from './components/experience'
-import Projects from './components/projects'
-import Certifications from './components/certifications'
+import Navbar from './components/navbar.jsx'
+import Hero1 from './components/hero1.jsx'
+import About from './components/about.jsx'
+import Experience from './components/experience.jsx'
+import Projects from './components/projects.jsx'
+import Certifications from './components/certifications.jsx'
 
 function App() {
 

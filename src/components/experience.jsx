@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import useIntersectionObserver from "./useIntersectionObserver";
-import VerticalTabs from "./vertTabs";
+import VerticalTabs from "./vertTabs.jsx";
 
 const Experience = (props) => {
     const elementsRef = useRef([]);

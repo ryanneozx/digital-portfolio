@@ -1,4 +1,4 @@
-import Themes from './navthemes'
+import Themes from './navthemes.jsx'
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
