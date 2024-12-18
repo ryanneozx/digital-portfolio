@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* example to apply tailwind class in css
+.btn {
+  @apply rounded-full;
+} */
+
+html { scroll-behavior: smooth; }
+
+.anchor {
+  scroll-margin-top: 80px;
+} /* Fixes navbar going past anchor */
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.fade-in.active {
+  animation: fadeIn 1s ease forwards;
+  animation-fill-mode: forwards; /* Ensure state persists after animation */
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 0; /* hide text before animation */
+}
+
+.proj-card:hover {
+  transform: translateY(-20px);
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+@keyframes glow2 {
+  0% {
+      drop-shadow: 0 0 0px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+      box-shadow: 0 0 0px rgba(255, 255, 255, 0.7);
+  }
+}
+
+.hover\:animate-glow:hover {
+  animation: glow2 1s infinite;
+}
+
+/* Social Media icons */
+.glow:hover {
+  color: oklch(var(--p));
+}
+
+/* hr loading bars */
+@keyframes loading {
+  0%   {width: 0%;}
+  20%   {width: 20%;}
+  50%  {width: 50%;}
+  100% {width: 100%;}
+}
+
+/* The element to apply the animation to */
+hr.active {
+  width: 100%;
+  animation-name: loading;
+  animation-duration: 1s;
+}
+
+
+/* Apply the animation to the text */
+.fade-text.active {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Apply the animation to the text */
+.delayed-fade {
+  opacity: 0%; /* hide text before animation */
+}
+
+.delayed-fade.active {
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.typewriter.active h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid oklch(var(--p)); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .01em; /* Adjust as needed */
+  line-height: 1.4; /* Prevents text/y from being cropped */
+  animation: 
+    typing 1.5s steps(25, end), /* Less seconds for shorter sentences, also less steps(number in the bracket) for shorter sentences*/
+    blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: oklch(var(--p)); }
+}
+
+.exp-border {
+  border-right: 5px solid oklch(var(--s));
+}
